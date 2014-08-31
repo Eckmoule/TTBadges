@@ -3,7 +3,7 @@ const CONNECTION_STRING = {
 	host     : 'localhost',
   	user     : 'root',
   	password : 'yeahyeah',
-  	database : 'TestNode'
+  	database : 'TTBadges'
 }
 
 exports.LISTENNING_PORT = LISTENNING_PORT;

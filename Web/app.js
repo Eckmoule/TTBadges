@@ -1,15 +1,14 @@
-var express = require('express');
-	debug = require('debug')('app');
-	config = require('./lib/config.js');
-	router = require('./lib/router/router.js');
+var express = require('express')
+	config = require('./lib/config.js')
+	router = require('./lib/Router/router.js')
 
-debug('Creating Express server ...');
+console.log('Creating Express server ...');
 var app = express();
-debug('Declaring public path ...');
+console.log('Declaring public path ...');
 app.use(express.static(__dirname + '/public'));
 
-debug('Setting up routes ...');
+console.log('Setting up routes ...');
 router.set(app);
 
 app.listen(config.LISTENNING_PORT);
-debug('Express server is listenning on port: %d', config.LISTENNING_PORT);
+console.log('Express server is listenning on port: %d', config.LISTENNING_PORT);

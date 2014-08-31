@@ -65,7 +65,7 @@ Create Table Player (
 	CategoryId int not null,
 	LastName varchar(100),
 	FirstName varchar(100),
-	LicenseNumber int,
+	LicenseNumber varchar(20),
 	Gender enum('M', 'F'),
 	CONSTRAINT PK_PLAYER PRIMARY KEY (PlayerId),
 	CONSTRAINT FK_PlAYER_CLUB FOREIGN KEY (ClubId) REFERENCES Club(ClubId),
