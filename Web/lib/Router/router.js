@@ -11,13 +11,13 @@ module.exports.set = function(app){
 		PlayerService.GetPlayer(req.params.PlayerId, 
 			function(player)
 			{ 
-				if(player != null)
-					res.render('Player.ejs', {Player: player}); 
+				if(player != null) { res.render('Player.ejs', {Player: player}); }
+				else { res.render('Lost.ejs'); }
 			});
 	});
 
 	app.use(function(req, res, next){
-    	res.setHeader('Content-Type', 'text/plain');
-    	res.status(404).send('Page introuvable !');
+    	res.setHeader('Content-Type', 'text/html');
+    	res.status(404).render('Lost.ejs');
 	});
 }

@@ -30,7 +30,7 @@ Create Table Category(
 
 Create Table Rank (
 	RankId int not null AUTO_INCREMENT,
-	Code varchar(2),
+	Code varchar(3),
 	MinimumPoint int,
 	MaximumPoint int,
 	CONSTRAINT PK_RANK PRIMARY KEY (RankId)
