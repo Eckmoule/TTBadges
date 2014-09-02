@@ -19,6 +19,8 @@ Create Table Contact(
 	StreetNumber varchar(10),
 	PostalCode varchar(10),
 	City varchar(100),
+	WebSite varchar(100),
+	ContactName varchar(100),
 	CONSTRAINT PK_CONTACT PRIMARY KEY (ContactId)
 );
 

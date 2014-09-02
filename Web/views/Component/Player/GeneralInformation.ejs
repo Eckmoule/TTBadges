@@ -1,0 +1,39 @@
+<div class="col-lg-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title"><%= Player.FullName %></h2>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-2">
+								<img src="http://api.randomuser.me/portraits/men/2.jpg" alt="" class="center-block img-circle img-thumbnail img-responsive" width="150" height="150">
+							</div>
+							<dl class="dl-horizontal col-lg-5">
+								<dt> Club: </dt>
+								<dd> <%= Player.Club %> </dd>
+								<dt> Numéro de license: </dt>
+								<dd> <%= Player.LicenseNumber %> </dd>
+								<dt> Categorie </dt>
+								<dd> <%= Player.Category %> </dd>
+								<dt> Sexe: </dt>
+								<dd> <%= Player.Gender %> </dd>
+							</dl>
+							<dl class="dl-horizontal  col-lg-5">
+								<dt> Classement officiel: </dt>
+								<dd> <%= Player.OfficialRank %> </dd>
+								<dt> Classement calculé: </dt>
+								<dd> <%= Player.Rank %> </dd>
+								<dt> Points: </dt>
+								<dd> <%= Player.Point %> </dd>
+							</dl>
+						</div>
+						<div class="row">
+							<div class="col-lg-offset-10">
+								<button class="btn btn-success btn-lg btn-round"><span class="glyphicon glyphicon-calendar" /></button>
+								<button class="btn btn-warning btn-lg btn-round"><span class="glyphicon glyphicon-comment"></span></button>
+								<button class="btn btn-danger btn-lg btn-round"><span class="glyphicon glyphicon-remove" /></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>

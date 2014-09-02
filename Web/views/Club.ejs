@@ -1,0 +1,50 @@
+<!Doctype> 
+<html lang="en">
+	<head>
+		<title> Club details </title>
+		<% include Component/Header %>
+	</head>
+	<body>
+		<div class="container">
+			<% include Component/Navigation %>
+			<div class="col-lg-12">
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<h2 class="panel-title"> <%= Club.Name %> </h2>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-3">
+								<img src="" alt="" class="center-block img-circle img-thumbnail img-responsive" width="150" height="150">
+							</div>
+							<dl class="dl-horizontal col-lg-3">
+								<dt> Contact: </dt>
+								<dd> <%= Club.ContactName %> </dd>
+								<dt> Numéro de téléphone: </dt>
+								<dd> <%= Club.PhoneNumber %> </dd>
+								<dt> Site web: </dt>
+								<dd> <a href=<%= '"' + Club.WebSite + '"' %>><%= Club.WebSite %></a></dd>
+							</dl>
+							<dl class="dl-horizontal  col-lg-3">
+								<dt> Adresse: </dt>
+								<dd> <%= Club.Address %> </dd>
+								<dt> Code postal: </dt>
+								<dd> <%= Club.PostalCode %> </dd>
+								<dt> Ville: </dt>
+								<dd> <%= Club.City %> </dd>
+								<dt> Google map </dt>
+								<dd> <span color="red"> TODO </span> </dd>
+							</dl>
+							<dl class="dl-horizontal  col-lg-3">
+								<dt> Nombre de joueur: </dt>
+								<dd> <span color="red"> TODO </span> </dd>
+								<dt> Nombre d'équipe: </dt>
+								<dd> <span color="red"> TODO </span> </dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

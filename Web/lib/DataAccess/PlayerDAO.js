@@ -29,7 +29,6 @@ module.exports.GetPlayer = function(playerId, callback){
 	DBConnector.Connection.query(getPlayerSQL, [playerId], function(err, rows, fields) {
 	  	if (err) { console.error("Error requesting database " +  err); }
 		else if(rows.length == 1) { callback(new Player(rows[0])); }	
-		callback(null);
+		else { callback(null); } //Return null to show an page (There is probably a better way to do)
 	});
-	
 }
