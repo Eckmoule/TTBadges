@@ -1,0 +1,33 @@
+<div class="col-lg-12">
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h2 class="panel-title"> <%= Club.Name %> </h2>
+		</div>
+		<div class="panel-body">
+			<div class="row">
+				<dl class="dl-horizontal col-lg-4">
+					<dt> Contact: </dt>
+					<dd> <%= Club.ContactName %> </dd>
+					<dt> Numéro de téléphone: </dt>
+					<dd> <%= Club.PhoneNumber %> </dd>
+					<dt> Site web: </dt>
+					<dd> <a href=<%= '"' + Club.WebSite + '"' %>><%= Club.WebSite %></a></dd>
+				</dl>
+				<dl class="dl-horizontal  col-lg-4">
+					<dt> Adresse: </dt>
+					<dd> <%= Club.Address %> </dd>
+					<dt> Code postal: </dt>
+					<dd> <%= Club.PostalCode %> </dd>
+					<dt> Ville: </dt>
+					<dd> <%= Club.City %> </dd>
+				</dl>
+				<dl class="dl-horizontal  col-lg-4">
+					<dt> Nombre de joueur: </dt>
+					<dd> <%= Club.NbPlayer %> </dd>
+					<dt> Nombre d'équipe: </dt>
+					<dd> <%= Club.NbTeam %> </dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</div>
