@@ -3,9 +3,9 @@
 		<a class="navbar-brand" href="#"> TTBadges </a>
 	</div>
     <ul class="nav navbar-nav">
-       	<li> <a href="/"> Accueil </a> </li>
-		<li class="active"> <a href="/Player/1">Joueurs</a> </li>
-       	<li> <a href="/Club/1">Clubs</a> </li>
-       	<li> <a href="/Team/1">Equipes</a> </li>
+       	<li<% if(typeof Menu == undefined || Menu == "Home") { %> class="active" <% } %>> <a href="/"> Accueil </a> </li>
+		<li<% if(typeof Menu != undefined && Menu == "Player") { %> class="active" <% } %>> <a href="/Player/1">Joueurs</a> </li>
+       	<li<% if(typeof Menu != undefined && Menu == "Club") { %> class="active" <% } %>> <a href="/Club/1">Clubs</a> </li>
+       	<li<% if(typeof Menu != undefined && Menu == "Team") { %> class="active" <% } %>> <a href="/Team/1">Equipes</a> </li>
     </ul>
 </nav>

@@ -4,7 +4,7 @@ var ClubService = require('../Business/ClubService.js');
 module.exports.set = function(app){
 	app.get('/', function(req, res){
 		res.setHeader('Content-Type', 'text/html');
-    	res.render('Index.ejs');
+    	res.render('Index.ejs', {Menu: 'Home'});
 	});
 
 	app.get('/Player/:PlayerId', function(req, res) {
@@ -12,8 +12,8 @@ module.exports.set = function(app){
 		PlayerService.GetPlayer(req.params.PlayerId, 
 			function(player)
 			{
-				if(player != null) {  res.status(200).render('Player.ejs', {Player: player});  } 
-				else { res.status(404).render('Lost.ejs'); }
+				if(player != null) {  res.status(200).render('Player.ejs', {Player: player, Menu: 'Player'});  } 
+				else { res.status(404).render('Lost.ejs', {Menu: 'Home'}); }
 			});
 	});
 
@@ -22,13 +22,13 @@ module.exports.set = function(app){
 		ClubService.GetClub(req.params.ClubId, 
 			function(club)
 			{
-				if(club != null) {  res.status(200).render('Club.ejs', {Club: club});  } 
-				else { res.status(404).render('Lost.ejs'); }
+				if(club != null) {  res.status(200).render('Club.ejs', {Club: club, Menu: 'Club'});  } 
+				else { res.status(404).render('Lost.ejs', {Menu: 'Home'}); }
 			});
 	});
 
 	app.use(function(req, res, next){
     	res.setHeader('Content-Type', 'text/html');
-    	res.status(404).render('Lost.ejs');
+    	res.status(404).render('Lost.ejs', {Menu: 'Home'});
 	});
 }
