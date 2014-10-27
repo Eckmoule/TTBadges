@@ -4,3 +4,4 @@ insert into Category values (NULL, 'Senior');
 insert into Player values(NULL, 1, 1, 'Béjannin', 'Yohan', '125675', 'M');
 insert into Season values (NULL, '2014-2015', 1, '2014-09-01', '2015-07-01');
 insert into PlayerRank values (NULL, 1, 11, 1, 208, '2014-09-02');
+insert into Team values (NULL, 1, 'AS Sans Soucis A');

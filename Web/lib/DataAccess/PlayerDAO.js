@@ -1,7 +1,7 @@
 var DBConnector = require('./DBConnector.js')
 	
 var getPlayerSQL = "SELECT p.LastName, p.FirstName, p.LicenseNumber, p.Gender, " +
-					"c.Name AS CategoryName, cl.Name AS ClubName, ofr.Code AS OfficialRank, pr.Point, r.Code AS Rank " +
+					"c.Name AS CategoryName, cl.Name AS ClubName, cl.ClubId as ClubId, ofr.Code AS OfficialRank, pr.Point, r.Code AS Rank " +
 					"FROM Player p " +
 					"JOIN Category c ON p.CategoryId = c.CategoryId " +
 					"JOIN Club cl ON p.ClubId = cl.ClubId " +
@@ -17,7 +17,8 @@ function Player(sqlLine) {
 	this.LicenseNumber = sqlLine.LicenseNumber;
 	this.Gender = sqlLine.Gender;
 	this.Category = sqlLine.CategoryName;
-	this.Club = sqlLine.ClubName;
+	this.ClubId = sqlLine.ClubId;
+	this.ClubName = sqlLine.ClubName;
 	this.OfficialRank = sqlLine.OfficialRank;
 	this.Rank = sqlLine.Rank;
 	this.Point = sqlLine.Point;

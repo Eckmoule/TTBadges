@@ -8,10 +8,6 @@ var getClubSQL = 'SELECT c.Name, co.PhoneNumber, co.ContactName, ' +
 				 'JOIN Contact co ON c.ContactId = co.ContactId ' +
 				 'WHERE c.ClubId = ?';
 
-var getPlayerNumber = 'SELECT count(PlayerId) as NbPlayer FROM Player where ClubId = ?';
-
-var getTeamNumber = 'SELECT count(TeamId) as NbTeam FROM Team where ClubId = ?';
-
 function Club(sqlLine) {
 	this.Name = sqlLine.Name;
 	this.ContactName = sqlLine.ContactName;
